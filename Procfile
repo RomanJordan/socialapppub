@@ -1,0 +1,1 @@
+web: gunicorn myspot.wsgi --log-file -

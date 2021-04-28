@@ -1,0 +1,26 @@
+/* html {
+    background-image: url(https://i.giphy.com/media/aRZ4vTsHnyW6A/giphy.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+} */
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+a:hover {
+    color: inherit;
+    text-decoration: inherit
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+#avatar {
+    max-width: 100px;
+    max-height: 100px;
+}

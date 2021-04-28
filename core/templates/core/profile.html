@@ -1,0 +1,40 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block content %}
+<head>
+    <link href="{% static 'profilestyle.css' %}" rel="stylesheet" type="text/css" media="screen" />
+</head>
+    <div class="name">
+        <img src="{{ profile.profile_image.url }}" alt="..." class="img-thumbnail border-1" id="avatar">
+        <h1 class="display-1 text-center">{{ profile.user.username }}</h1>
+        
+    </div>
+    
+    <div class="links">
+        {% if profile.facebook_link != '' %}
+            <a  class="btn btn-outline-dark btn-lg btn-block" href="{{ profile.facebook_link }}">Facebook</a>
+        {% endif %}
+
+        {% if profile.instagram_link != '' %}
+            <a  class="btn btn-outline-dark btn-lg btn-block" href="{{ user.profile.instagram_link }}">Instagram</a>
+        {% endif %}
+
+        {% if profile.twitter_link != '' %}
+            <a  class="btn btn-outline-dark btn-lg btn-block" href="{{ user.profile.twitter_link }}">Twitter</a>
+        {% endif %}
+
+        {% if profile.youtube_link != '' %}
+            <a  class="btn btn-outline-dark btn-lg btn-block" href="{{ user.profile.youtube_link }}">YouTube</a>
+        {% endif %}
+
+        {% if profile.patreon_link != '' %}
+            <a  class="btn btn-outline-dark btn-lg btn-block" href="{{ user.profile.patreon_link }}">Patreon</a>
+        {% endif %}
+
+        {% if profile.twitch_link != '' %}
+            <a  class="btn btn-outline-dark btn-lg btn-block" href="{{ user.profile.twitch_link }}">Twitch</a>
+        {% endif %}
+    </div>
+
+    <!-- <a href={% url 'logout' %}><button class="button is-link">Logout</button></a> -->
+{% endblock content %}

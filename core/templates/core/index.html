@@ -1,0 +1,17 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block content %}
+
+    {% if user.is_authenticated %}
+    <div align="center">
+        <h2>You are currently logged in as : {{ user.username }}</h2>
+        Why don't you check out your <a href="{% url 'profile' user.username %}">profile?</a>
+    </div>
+    {% else %}
+    <div align="center">
+        <h1 class="display-4">The One Link For All Of Your Other Links (^・ω・^ )!</h1>
+        <a class="btn btn-primary" href="{% url 'register' %}">Sign Up</a>
+        <p class="small">It's free!</p>
+    </div>
+    {% endif %}
+{% endblock content %}
